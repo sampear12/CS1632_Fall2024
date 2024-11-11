@@ -15,7 +15,7 @@ public class DrunkCarnivalShooterImpl implements DrunkCarnivalShooter {
 
 	private static ArrayList<Boolean> targets;
 	private static int remainingTargetNum;
-
+	 @FilterField
 	private static int roundNum;
 
 	/**
@@ -162,6 +162,7 @@ public class DrunkCarnivalShooterImpl implements DrunkCarnivalShooter {
 			int t = 1;
 			if (scanner == null) {
 				// TODO: Enumerate all possible values of t using JPF Verify.
+				t = Verify.getInt(0, 3);
 			} else {
 				t = scanner.nextInt();
 			}
